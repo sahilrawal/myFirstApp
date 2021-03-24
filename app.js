@@ -2,4 +2,4 @@ My App files.
 
 File modified.
 
-Changed for branch1. New addition.
+I want to keep these changes only from branch1.
