@@ -1,0 +1,232 @@
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git remote
+myFirstApp
+origin
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git branch
+  branch1
+* master
+  vwBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git checkout srBranch
+Switched to a new branch 'srBranch'
+Branch 'srBranch' set up to track remote branch 'srBranch' from 'myFirstApp'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git push srBranch
+fatal: 'srBranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'myFirstApp/master'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git pull
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git fetch -all
+error: did you mean `--all` (with two dashes)?
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git fetch --all
+Fetching origin
+Fetching myFirstApp
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git branch --all
+  branch1
+* master
+  srBranch
+  vwBranch
+  remotes/myFirstApp/master
+  remotes/myFirstApp/srBranch
+  remotes/myFirstApp/vwBranch
+  remotes/origin/master
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git branch
+  branch1
+* master
+  srBranch
+  vwBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$  git checkout master
+Already on 'master'
+Your branch is up to date with 'myFirstApp/master'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git pull
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git checkout srBranch
+Switched to branch 'srBranch'
+Your branch is up to date with 'myFirstApp/srBranch'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git pull
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git merge master
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git add .
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git add .
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git commit -m "Saved in srBranch"
+[srBranch 7d01d16] Saved in srBranch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 152.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sahilrawal/myFirstApp.git
+   2a56417..7d01d16  srBranch -> srBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'myFirstApp/master'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 627 bytes | 10.00 KiB/s, done.
+From https://github.com/sahilrawal/myFirstApp
+   2a56417..7a8154c  master     -> myFirstApp/master
+Updating 2a56417..7a8154c
+Fast-forward
+ app.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git checkout vwBranch
+Switched to branch 'vwBranch'
+Your branch is up to date with 'myFirstApp/vwBranch'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git pull
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git merge master
+Updating d09ee4f..7a8154c
+Fast-forward
+ app.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sahilrawal/myFirstApp.git
+   d09ee4f..7a8154c  vwBranch -> vwBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git add  .
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git commit -m "save in vw branch"
+[vwBranch 69855bc] save in vw branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sahilrawal/myFirstApp.git
+   7a8154c..69855bc  vwBranch -> vwBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (vwBranch)
+$ git checkout srBranch
+Switched to branch 'srBranch'
+Your branch is up to date with 'myFirstApp/srBranch'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git pull origin srBranch
+fatal: couldn't find remote ref srBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 630 bytes | 14.00 KiB/s, done.
+From https://github.com/sahilrawal/myFirstApp
+   7a8154c..61dbb0f  master     -> myFirstApp/master
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git add .
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git commit -m "save in SR branch"
+[srBranch b6ab4cf] save in SR branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 154.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sahilrawal/myFirstApp.git
+   7d01d16..b6ab4cf  srBranch -> srBranch
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'myFirstApp/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git pull
+Updating 7a8154c..61dbb0f
+Fast-forward
+ app.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (master)
+$ git checkout srBranch
+Switched to branch 'srBranch'
+Your branch is up to date with 'myFirstApp/srBranch'.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git pull
+Already up to date.
+
+sahil rawal@LAPTOP-LK3O5FDL MINGW64 ~/Desktop/myFirstApp (srBranch)
+$ git merge master
+Auto-merging app.js
+CONFLICT (content): Merge conflict in app.js
+Automatic merge failed; fix conflicts and then commit the result.
